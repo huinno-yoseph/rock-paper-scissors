@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: fastapi-app
   namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-deployed.build-acceptance-test: ""
 spec:
   project: default
   source:
