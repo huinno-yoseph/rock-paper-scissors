@@ -7,6 +7,6 @@ spec:
     app: rock-paper-scissors
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 6001
+      targetPort: 6001
   type: LoadBalancer

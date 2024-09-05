@@ -8,6 +8,6 @@ RUN gradle build --no-daemon
 # Stage 2: Create the final image
 FROM openjdk:17
 WORKDIR /app
-COPY --from=build /app/build/libs/rock-paper-scissors.jar /app/rock-paper-scissors.jar
+COPY --from=build /app/build/libs/*.jar /app/rock-paper-scissors.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/app/rock-paper-scissors.jar"]
