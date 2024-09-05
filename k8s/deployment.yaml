@@ -5,7 +5,7 @@ metadata:
   labels:
     app: rock-paper-scissors
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: rock-paper-scissors

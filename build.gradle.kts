@@ -1,13 +1,17 @@
+java {
+    sourceCompatibility = JavaVersion.VERSION_11  // Java 11 사용
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
 plugins {
-    id("org.springframework.boot") version "3.0.0" // 최신 버전으로 업데이트
-    id("io.spring.dependency-management") version "1.1.0" // 최신 버전으로 업데이트
-    kotlin("jvm") version "1.9.0" // Kotlin 1.9.0 사용
-    kotlin("plugin.spring") version "1.9.0"
+    id("org.springframework.boot") version "2.7.0"  // Spring Boot 2.7.x로 버전 낮춤
+    id("io.spring.dependency-management") version "1.0.11.RELEASE"
+    kotlin("jvm") version "1.6.21"
+    kotlin("plugin.spring") version "1.6.21"
 }
 
 group = "com.example"
 version = "1.0-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_17 // Java 17 이상 사용 권장
 
 repositories {
     mavenCentral()

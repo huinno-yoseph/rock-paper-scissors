@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: rock-paper-scissors-app
   namespace: argocd
-  annotations:
-    notifications.argoproj.io/subscribe/on-deployed.build-acceptance-test: ""
 spec:
   project: default
   source:
