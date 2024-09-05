@@ -22,8 +22,10 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
-tasks.withType<Test> {
-    useJUnitPlatform()
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "com.example.game.GameApplication"  // 메인 클래스를 지정
+    }
 }
 
 tasks.withType<Jar> {
