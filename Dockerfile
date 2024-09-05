@@ -11,8 +11,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 애플리케이션 코드 복사
 COPY . .
 
-# 6002 포트를 컨테이너 외부에 노출
-EXPOSE 6002
+# 8000 포트를 컨테이너 외부에 노출
+EXPOSE 8000
 
 # Uvicorn을 사용하여 FastAPI 서버 실행
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "6002"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
