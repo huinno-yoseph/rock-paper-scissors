@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rock-paper-scissors-app
+  name: fastapi-app
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/huinno-yoseph/rock-paper-scissors.git'
-    targetRevision: HEAD
-    path: 'k8s'  # Kubernetes manifests가 있는 디렉터리
+    repoURL: 'https://github.com/ys.cha-huinno/rock-paper-scissors.git'  # YAML 파일들이 있는 Git 리포지토리
+    targetRevision: HEAD  # 배포할 Git 브랜치
+    path: 'manifests'  # Kubernetes manifest 파일이 위치한 디렉토리
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: argocd
+    namespace: argocd  # FastAPI 애플리케이션을 배포할 네임스페이스
   syncPolicy:
     automated:
       prune: true
