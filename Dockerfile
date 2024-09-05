@@ -9,5 +9,5 @@ RUN gradle build --no-daemon
 FROM openjdk:17
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar /app/rock-paper-scissors.jar
-EXPOSE 8080
+EXPOSE 6001
 ENTRYPOINT ["java", "-jar", "/app/rock-paper-scissors.jar"]
