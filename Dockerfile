@@ -2,7 +2,7 @@
 FROM python:3.12-slim
 
 # 작업 디렉토리 설정
-WORKDIR /app
+WORKDIR .
 
 # 필요 파일들을 복사
 COPY requirements.txt requirements.txt
