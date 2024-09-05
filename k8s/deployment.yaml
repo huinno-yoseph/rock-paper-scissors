@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: rock-paper-scissors
-          image: your-docker-repo/rock-paper-scissors:latest
+          image: clmfkilu/rock-paper-scissors:latest
           ports:
             - containerPort: 8080
