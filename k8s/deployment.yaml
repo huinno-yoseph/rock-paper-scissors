@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: fastapi-container
-        image: clmfkilu/fastapi-rock-paper-scissors:0.1.2
+        image: clmfkilu/fastapi-rock-paper-scissors:latest
         ports:
         - containerPort: 6002
