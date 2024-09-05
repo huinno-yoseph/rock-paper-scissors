@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rock-paper-scissors-deployment
+  name: rock-paper-scissors-app
   labels:
     app: rock-paper-scissors
 spec:
