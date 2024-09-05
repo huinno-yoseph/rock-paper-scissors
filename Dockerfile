@@ -1,12 +1,12 @@
 # Stage 1: Build the application
-FROM gradle:8.1-jdk11 AS build
+FROM gradle:8.8-jdk17 AS build
 WORKDIR /app
 COPY build.gradle.kts settings.gradle.kts ./
 COPY src ./src
 RUN gradle build --no-daemon
 
 # Stage 2: Create the final image
-FROM openjdk:11-jre-slim
+FROM openjdk:17
 WORKDIR /app
 COPY --from=build /app/build/libs/rock-paper-scissors.jar /app/rock-paper-scissors.jar
 EXPOSE 8080
