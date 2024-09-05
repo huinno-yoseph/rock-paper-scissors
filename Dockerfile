@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 6002
 
 # Uvicorn을 사용하여 FastAPI 서버 실행
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "6002"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "6002"]
