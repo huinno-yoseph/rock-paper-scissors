@@ -4,9 +4,6 @@ metadata:
   name: fastapi-app
   labels:
     app: fastapi-app
-  annotations:
-    notifications.argoproj.io/subscribe.sync-operation-change.slack: 1-team-sqa
-    notifications.argoproj.io/subscribe.on-deployed.build-acceptance-test: ""
 spec:
   replicas: 2
   selector:
