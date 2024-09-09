@@ -4,7 +4,7 @@ metadata:
   name: fastapi-app
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-deployed.build-acceptance-test: ""
+    notifications.argoproj.io/subscribe.sync-operation-change.build-acceptance-test: ""
     notifications.argoproj.io/subscribe.sync-operation-change.slack: 1-team-sqa
 spec:
   project: default
