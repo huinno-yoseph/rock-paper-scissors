@@ -14,7 +14,7 @@ spec:
     path: k8s  # Kubernetes manifest 파일이 위치한 디렉토리
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: care
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
